@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".users.activities.LoginActivity">
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="254dp"
+        android:layout_height="58dp"
+        android:ems="10"
+        android:hint="Enter UserName"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.216" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="254dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <Button
+        android:id="@+id/createAccount"
+        android:layout_width="254dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:text="Login"
+        android:textColor="@color/black"
+        app:backgroundTint="#a4d4a4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="172dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="32dp"
+        android:text="Sign Up"
+        android:textColor="@color/black"
+        app:backgroundTint="#a4d4a4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createAccount" />
+
+    <Button
+        android:id="@+id/passResetButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="227dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="32dp"
+        android:text="Forgot your password?"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

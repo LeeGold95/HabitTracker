@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/nav_toolbar"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".users.activities.ProfileActivity">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.031"
+                app:srcCompat="@drawable/ic_person_pin"
+                app:tint="#FF2DAD67"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:id="@+id/nameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="username"
+                android:textColor="#FF2DAD67"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="48dp"
+                android:text="Email address"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.204"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameTitle" />
+
+            <TextView
+                android:id="@+id/mailTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="48dp"
+                android:text="mailTitle"
+                android:textColor="#FF2DAD67"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/nameTitle" />
+
+            <Button
+                android:id="@+id/changeMailButton"
+                android:layout_width="172dp"
+                android:layout_height="47dp"
+                android:text="Change email"
+                android:textColor="@color/black"
+                app:backgroundTint="#a4d4a4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mailTitle"
+                app:layout_constraintVertical_bias="0.428" />
+
+            <Button
+                android:id="@+id/changePassButton"
+                android:layout_width="172dp"
+                android:layout_height="47dp"
+                android:layout_marginTop="16dp"
+                android:text="Reset Password"
+                android:textColor="@color/black"
+                app:backgroundTint="#a4d4a4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/changeMailButton" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white">
+
+        <include
+            layout="@layout/nav_drawer"/>
+
+    </RelativeLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
